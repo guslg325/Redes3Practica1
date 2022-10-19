@@ -276,6 +276,12 @@ public class AgentManager {
 
             PdfFont myFontBold = PdfFontFactory.createFont(StandardFonts.HELVETICA_BOLD);
             PdfFont myFont = PdfFontFactory.createFont(StandardFonts.HELVETICA);
+            
+            Paragraph p0 = new Paragraph();
+            p0.add("Administración de servicios en red\n Práctica 1\n López González Gustavo\t 4CM13");
+            p0.setTextAlignment(TextAlignment.LEFT);
+            p0.setFont(myFont);
+            p0.setFontSize(14);
 
             Paragraph p1 = new Paragraph();
             p1.add("Reporte del agente "+agent.getAddress());
@@ -319,6 +325,7 @@ public class AgentManager {
             p7.setFont(myFont);
             p7.setFontSize(14);
 
+            doc.add(p0);
             doc.add(p1);
             doc.add(p2);
             doc.add(p3);
